@@ -26,6 +26,8 @@
 body {
 	width: 100vw;
 	height: 100vh;
+	background-image: url("../images/background-home.png");
+	background-position: center;
 }
 
 
@@ -74,7 +76,36 @@ header a {
 	font-size: 30px;
 }
 
+header a svg {
+	filter: drop-shadow(2px 2px 1px white);
+}
+
 #back-to-prev:hover, #hamburger:hover {
 	transition: background-color 0.1s;
 	background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Responsive */
+@media screen and (max-width: 599px) {
+	/* Header */
+	#top-icon div {
+		width: 45px;
+		height: 40px;
+	}
+	
+	#back-to-prev, #hamburger {
+		width: 66px;
+		height: 56px;
+		line-height: 56px;
+		font-size: 28px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+	
+}
+
+@media screen and (min-width: 1025px) {
+	
 }
