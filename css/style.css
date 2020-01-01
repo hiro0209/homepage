@@ -35,3 +35,46 @@ header {
 	align-items: center;
 	width: 100%;
 }
+
+header a {
+	cursor: pointer;
+}
+
+#top-icon {
+	display: block;
+	padding: 8px 8px 8px 16px;
+	text-align: center;
+}
+
+#top-icon div {
+	width: 67px;
+	height: 60px;
+	background-image: url("../images/logo.svg");
+	background-repeat: no-repeat;
+}
+
+#back-to-prev {
+	display: block;
+	width: 86px;
+	height: 76px;
+	line-height: 76px;
+	margin-left: auto;
+	color: white;
+	text-align: center;
+	font-size: 40px;
+}
+
+#hamburger {
+	display: block;
+	width: 86px;
+	height: 76px;
+	line-height: 76px;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+}
+
+#back-to-prev:hover, #hamburger:hover {
+	transition: background-color 0.1s;
+	background-color: rgba(255, 255, 255, 0.4);
+}
