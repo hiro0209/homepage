@@ -1,12 +1,15 @@
 //サイト全体のアニメーション
+let pageId;
 
 //ready
 $(function() {
-	animeElementAnimation();
+	
+	pageId = $("body").attr("id");
+	animeElementStartAnimation();
 });
 
 //スタートアニメーション
-function animeElementAnimation() {
+function animeElementStartAnimation() {
 	let svg = $("#anime-ele");
 	let width = $(window).width();
 	let height = $(window).height();
