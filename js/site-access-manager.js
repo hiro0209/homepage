@@ -20,14 +20,28 @@ $(window).on("popstate", function() {
 	let nowPage = $("body").attr("id");
 	
 	//履歴追加
+	/*
 	let path = location.pathname;
 	let doc = path.substring(0, path.lastIndexOf("/"));
 	let htmlName = doc.substring(doc.lastIndexOf("/"));
-	/*switch(nowPage) {
+	switch(nowPage) {
 		case "home":
-			switch(htmlName) {
-					case 
+			if(htmlName == "profile" || htmlName == "content" || htmlName == "contact") {
+				history.pushState(null, null, "../index.html");
 			}
+			break;
+		case "profile":
+			if(htmlName == "home") {
+				history.pushState(null, null, "profile/index.html");
+			} else if(htmlName == "content" || htmlName == "contact") {
+				history.pushState(null, null, "../profile/index.html");
+			}
+			break;
+		case "content":
+			break;
+		case "contact":
+			break;
 	}*/
 	
 });
+history.pushState(null, null, "https://www.yahoo.co.jp/");
