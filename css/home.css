@@ -1,19 +1,132 @@
 /* Home Content Style */
 
-body {
-	width: 100vw;
-	height: 100vh;
-	background-image: url("../images/background-home.png");
-	background-position: center;
+.content-home .introduction {
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	text-align: center;
 }
 
-.wrap {
+/* Profile Icon */
+.content-home #profile-icon {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: 0 0 20px 5px white;
+	position: relative;
+	z-index: 4;
+}
+
+.content-home #profile-icon::after {
+	display: block;
+	content: "";
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	margin-bottom: 100%;
+	border-radius: 50%;
+	transition: background-color 0.3s;
+}
+
+.content-home #profile-icon:hover::after {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* SNS Links */
+.sns-links a {
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: solid 2px white;
+	background-color: rgba(96,168,255,0.5);
+	box-shadow: 0 0 10px 5px rgba(39,151,255,0.5) inset;
+	color: white;
+	line-height: 60px;
+	padding-top: 1px;
+	font-size: 34px;
+	cursor: pointer;
+	transition: background-color 0.5s, color 0.5s;
+}
+
+#sns-links-open:hover {
+	background-color: white;
+	color: rgba(255, 198, 0, 1.00);
+}
+
+#sns-links-twitter:hover {
+	background-color: white;
+	color: rgba(54, 152, 255, 1.00);
+}
+
+#sns-links-facebook:hover {
+	background-color: white;
+	color: rgba(37, 50, 126, 1.00);
+}
+
+/* Greeting */
+.content-home #greeting {
+	margin-top: 28px;
+	color: white;
+	font-size: 3em;
+	line-height: 2em;
 }
 
 
-@media screen and (max-width: 1572px) {
+/* Responsive */
+@media screen and (max-width: 599px) {
+	/* Profile Icon */
+	.content-home #profile-icon {
+		width: 140px;
+		height: 140px;
+		background-image: url("../images/jidori-small.png");
+	}
 	
-} 
+	/* Greeting */
+	.content-home #greeting {
+		font-size: 2.6em;
+	}
+	
+	.content-home #greeting span::after {
+		content: "\A";
+		white-space: pre;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+	/* Profile Icon */
+	.content-home #profile-icon {
+		width: 160px;
+		height: 160px;
+		background-image: url("../images/jidori-middle.png");
+	}
+	
+	/* Greeting */
+	.content-home #greeting {
+		font-size: 2.8em;
+	}
+	
+	.content-home #greeting span::after {
+		content: "\A";
+		white-space: pre;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	/* Profile Icon */
+	.content-home #profile-icon {
+		width: 200px;
+		height: 200px;
+		background-image: url("../images/jidori-large.png");
+	}
+	
+	.content-home #greeting span::after {
+		content: " "
+	}
+}
+
+@media screen and (max-width: 1572px) {
+	.content-home .introduction {
+		left: 0;
+		right: 0;
+	}
+}

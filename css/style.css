@@ -28,6 +28,17 @@ body {
 	height: 100vh;
 }
 
+.home {
+	background-image: url("../images/background-home.png");
+	background-position: center;
+}
+
+.wrap {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
 
 /* Animation Element */
 #anime-ele {
@@ -36,7 +47,7 @@ body {
 	position: fixed;
 	top: 0;
 	right: 0;
-	z-index: 2;
+	z-index: 1;
 }
 
 
@@ -47,7 +58,6 @@ header {
 	width: 100%;
 	position: fixed;
 	top: 0;
-	z-index: 3;
 }
 
 header a {
@@ -76,6 +86,8 @@ header a {
 	color: white;
 	text-align: center;
 	font-size: 40px;
+	opacity: 0;
+	transition: opacity 0.5s, background-color 0.3s, filter 0.5s;
 }
 
 .home #back-to-prev {
@@ -90,6 +102,8 @@ header a {
 	color: white;
 	text-align: center;
 	font-size: 30px;
+	opacity: 0;
+	transition: opacity 0.5s, background-color 0.3s;
 }
 
 .home #hamburger {
@@ -101,7 +115,6 @@ header a svg {
 }
 
 #back-to-prev:hover, #hamburger:hover {
-	transition: background-color 0.3s;
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -121,8 +134,8 @@ header a svg {
 
 .navigation ul li a {
 	display: block;
-	font-size: 2.2rem;
-	line-height: 4rem;
+	font-size: 2em;
+	line-height: 2em;
 	color: white;
 	cursor: pointer;
 	transition: color 0.3s;
@@ -151,9 +164,15 @@ main {
 	height: 100%;
 }
 
-main iframe {
+main section {
 	width: 100%;
-	height: 100%
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
 }
 
 
@@ -171,12 +190,27 @@ main iframe {
 		line-height: 56px;
 		font-size: 28px;
 	}
+	
+	/* Main Content */
+	main section {
+		z-index: 2;
+	}
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
-	
+	/* Main Content */
+	main section {
+		z-index: 2;
+	}
 }
 
 @media screen and (min-width: 1025px) {
 	
+}
+
+@media screen and (min-width: 1573px) {
+	/* Header */
+	#hamburger {
+		display: none;
+	}
 }
