@@ -44,4 +44,4 @@ $(window).on("popstate", function() {
 	}*/
 	
 });
-history.pushState(null, null, "https://www.yahoo.co.jp/");
+window.history.pushState(null, null, "profile/index.html");
