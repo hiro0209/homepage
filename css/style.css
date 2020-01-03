@@ -26,8 +26,6 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	background-image: url("../images/background-home.png");
-	background-position: center;
 }
 
 
@@ -80,6 +78,10 @@ header a {
 	font-size: 40px;
 }
 
+.home #back-to-prev {
+	display: none;
+}
+
 #hamburger {
 	display: block;
 	width: 86px;
@@ -90,13 +92,68 @@ header a {
 	font-size: 30px;
 }
 
+.home #hamburger {
+	margin-left: auto;
+}
+
 header a svg {
 	filter: drop-shadow(2px 2px 1px white);
 }
 
 #back-to-prev:hover, #hamburger:hover {
-	transition: background-color 0.1s;
+	transition: background-color 0.3s;
 	background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* Navigation */
+.navigation {
+	display: none;
+	position: fixed;
+	z-index: 3;
+	right: 5%;
+	margin-top: 12%;
+}
+
+.navigation ul li:not(:last-child) {
+	margin-bottom: 42px;
+}
+
+.navigation ul li a {
+	display: block;
+	font-size: 2.2rem;
+	line-height: 4rem;
+	color: white;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+
+#nav-home:hover {
+	color: #FFE352
+}
+
+#nav-profile:hover {
+	color: #FF882C;
+}
+
+#nav-content:hover {
+	color: #FF4D50;
+}
+
+#nav-contact:hover {
+	color: #70EFFF;
+}
+
+
+/* Main Content */
+main {
+	width: 100%;
+	height: 100%;
+}
+
+main iframe {
+	width: 100%;
+	height: 100%
 }
 
 

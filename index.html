@@ -23,7 +23,7 @@
 <script src="js/animation.js"></script>
 </head>
 
-<body id="home">
+<body class="home">
 <!-- Animation Element -->
 <svg id="anime-ele" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<path fill="#000000"></path>
@@ -36,8 +36,19 @@
 	<a id="hamburger"><i class="fas fa-bars"></i></a>
 </header>
 
+<!-- Navigation -->
+<nav class="navigation">
+	<ul>
+		<li><a id="nav-home">HOME</a></li>
+		<li><a id="nav-profile">PROFILE</a></li>
+		<li><a id="nav-content">CONTENT</a></li>
+		<li><a id="nav-contact">CONTACT</a></li>
+	</ul>
+</nav>
+
 <!-- Main Content -->
 <main>
+	<iframe id="content-home" src="home.html" scrolling="no" frameborder="no"></iframe>
 </main>
 </body>
 </html>
