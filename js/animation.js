@@ -3,10 +3,15 @@
 //ready
 $(function() {
 	//スタートアニメーション
-	if($(window).width() >= 1572) {
+	if($(window).width() > 1572) {
 		animeElementStartAnimation();
 	} else {
 		animeElementStartAnimationForMobile();
+	}
+	
+	//ヘッダーボタンの表示
+	if($(window).width() <= 1572) {
+		showHeader();
 	}
 });
 
@@ -19,7 +24,8 @@ $(window).on("resize", () => {
 		let path;
 		let svg = $("#anime-ele");
 		svg.attr("viewBox", "0 0 " + width + " " + height);
-		if(width < 1572) {
+		if(width <= 1572) {
+			showHeader();
 			$(".navigation").hide();
 			svg.children("path").attr("d", "");
 		} else  {
@@ -66,6 +72,8 @@ function animeElementStartAnimation() {
 			path = "M" + ((width - widthCount) * 0.9) + ",0 L" + width + ",0 " + width + "," + height + " " + ((width - widthCount) * 0.9) + "," + height + " Q" + ((width - widthCount)) + " " + (height / 2 * 2 - height / 20) + " " + ((width - widthCount)) + " " + (height / 2) + " T" + ((width - widthCount) * 0.9) + " 0";
 			svg.children("path").attr("d", path);
 		} else {
+			showHeader();
+			$("section").css("z-index", "2");
 			$(".navigation").slideToggle();
 			clearInterval(timer);
 		}
@@ -83,4 +91,15 @@ function animeElementStartAnimation() {
 
 function animeElementStartAnimationForMobile() {
 	
+}
+
+function showHeader() {
+	$("header").css("z-index", "3");
+	
+	if($("body").attr("class") != "home") {
+		$("#back-to-prev").css("opacity", "1");
+	}
+	if($(window).width() <= 1572) {
+		$("#hamburger").css("opacity", "1");
+	}
 }
