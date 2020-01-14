@@ -14,14 +14,9 @@ body {
 }
 
 h1 {
-	display: block;
 	font-size: 30px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	margin: auto;
+	text-align: center;
+	margin-top:40px;
 }
 
 
