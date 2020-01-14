@@ -13,12 +13,6 @@ body {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-	font-size: 30px;
-	text-align: center;
-	margin-top:40px;
-}
-
 
 @media screen and (max-width: 1572px) {
 	
